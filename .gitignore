@@ -1,12 +1,17 @@
+
+!data/sample.json
+# Ignore every bucket except the shipped sample
 # Runtime artifacts (never commit real receipts or backups)
-data/receipts.json
+*.py[cod]
+*.pyc
+.DS_Store
+.env
+.env.*
+.venv/
+__pycache__/
+data/*.json
 data/*.json.tmp-*
 data/backups/
-
-# Ignore every bucket except the shipped sample
-data/*.json
-!data/sample.json
-
-__pycache__/
-*.py[cod]
-.DS_Store
+data/receipts.json
+dist/*.tmp
+node_modules/
